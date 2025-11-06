@@ -28,9 +28,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={btnClass} legacyBehavior>
-        <a className={btnClass}>{children}</a>
-      </Link>
+      <Link href={href} className={btnClass}>{children}</Link>
     );
   }
 

@@ -29,6 +29,11 @@ const requestApiBackend = async <T>(endpoint: string): Promise<Types.serverRespo
  * Queries the API backend 
  */
 export async function loadShops(): Promise<Types.Shop[] | null> {
-  const data: Types.Shop[] = await requestApiBackend(endpoint('shop', {}));
+  const data: Types.Shop[] = await requestApiBackend(endpoint('query/shop', {}));
+  return data;
+}
+
+export async function loadShop({slug}:{slug:string}): Promise<Types.serverResponse<Types.Shop> | null> {
+  const data: Types.serverResponse<Types.Shop> = await requestApiBackend(endpoint(`query/shop/shops/${slug}`, {}));
   return data;
 }

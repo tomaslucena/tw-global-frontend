@@ -14,7 +14,10 @@ export default function Michelin() {
         <defs></defs>
         <path d="M0,38.44c0-3.33,0-6.67,0-10,.85.08,1.96.22,3.5,0,13.78-.03,24.95-11.21,24.95-25V0s0,38.44,0,38.44H0Z"/>
       </svg>
-      <h3 className="text-white">MICHELING GUIDE<br />{ new Date().getFullYear() - 1 } & { new Date().getFullYear() }</h3>
+      <div className="pl-8">
+        <h5 className="text-white text-bold">MICHELING GUIDE</h5>
+        <div className="text-white text-xl">{ new Date().getFullYear() - 1 } & { new Date().getFullYear() }</div>
+      </div>
       <Image
         src={MichelinIcon}
         alt="Michelin Star"

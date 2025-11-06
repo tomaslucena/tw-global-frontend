@@ -1,7 +1,7 @@
 "use client"
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRightLong, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import Swiper from 'swiper';
 import { Navigation, A11y, Pagination, Autoplay, FreeMode } from 'swiper/modules'
 import 'swiper/css';
@@ -42,8 +42,8 @@ export default function SwiperSlider({initializer, settings, children, controlsC
       </div>
       <div className={`${resetControls ? 'default-controls' : 'slider-controls'} ${controlsClass}`}>
         <div className={`swiper-pagination`}></div>
-        <div className={`slider-controls-prev swiper-button-prev`}><FontAwesomeIcon icon={faArrowLeftLong} size='xl' /></div>
-        <div className={`slider-controls-next swiper-button-next`}><FontAwesomeIcon icon={faArrowRightLong} size='xl' /></div>
+        <div className={`slider-controls-prev swiper-button-prev`}><FontAwesomeIcon icon={faArrowLeft} size='xl' /></div>
+        <div className={`slider-controls-next swiper-button-next`}><FontAwesomeIcon icon={faArrowRight} size='xl' /></div>
       </div>
     </div>
   )

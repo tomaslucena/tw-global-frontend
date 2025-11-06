@@ -1,0 +1,19 @@
+.shopImageWrapper {
+  position: relative;
+  width: auto;
+  height: 200px;
+  border-radius: 25px;
+  overflow: hidden;
+  &.gridDisplay {
+    height: 350px;
+  }
+  &.yourCity {
+    background-color: #F5F5F5;
+    img {
+      object-fit: contain;
+      max-width: 150px;
+      left: 50% !important;
+      transform: translateX(-50%);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.about {
+  max-width: 100%;
+  position: relative;
+  @media(min-width: 1024px) {
+    max-width: 50%;
+  }
+  img {
+    margin-left: 0rem;
+    @media(min-width: 1024px) {
+      margin-left: 2rem;
+    }
+  }
+  &:before {
+    width: 60%;
+    height: 100%;
+    display: none;
+    content: "";
+    background: 
+      url("_assets/images/orange-clouds.webp") lightgray 50% / cover no-repeat, 
+      linear-gradient(90deg, #FFEFDF 0%, #F3A660 100%);
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @media(min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+.aboutIntro {
+  --title-size: 60px;
+  --letter-spacing: 1.5px;
+  text-align: center;
+  @media(min-width: 1024px) {
+    --title-size: 72px;
+    text-align: left;
+  }
+  p {
+    max-width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    @media(min-width: 1024px) {
+      max-width: 350px;
+    }
+  }
+  .playfullyTraditional {
+    font-weight: 700;
+    font-size: var(--title-size);
+    line-height: 1.2;
+    letter-spacing: var(--letter-spacing);
+  }
+  .uniquelyTwist {
+    color: var(--brand-green);
+    font-weight: 700;
+    font-size: var(--title-size);
+    line-height: 1.2;
+    letter-spacing: var(--letter-spacing);
+  }
+}
+
+.introQuotes {
+  text-align: center;
+  margin-bottom: 1rem;
+  span {
+    color: var(--brand-green);
+    font-size: 180px;
+    line-height: 0;
+    margin-top: 2rem;
+    display: block;
+  }
+}
+
+.testimonialImage {
+  border-radius: 25px;
+  // aspect-ratio: 4/3;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+  }
+}
+
+.testimonialContent {
+  padding: 1rem;
+  p {
+    margin-block: 1rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  div {
+    font-weight: 600;
+    font-size: 1.2rem;
+    span {
+      color: var(--brand-green);
+    }
+  }
+}

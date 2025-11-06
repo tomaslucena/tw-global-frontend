@@ -1,0 +1,58 @@
+.footer {
+  max-width: var(--max-width);
+  margin: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #F5F5F5;
+  span {
+    font-weight: 600;
+  }
+  .legals {
+    color: #FFF;
+    background-color: var(--brand-green);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 1rem 2rem;
+  }
+  .socials {
+    img {
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
+  .halfLogo {
+    margin-right: -2rem;
+  }
+  nav {
+    &:hover {
+      li:nth-child(3) {
+        color: #000;
+      }
+    }
+    margin-bottom: 1rem;
+    li {
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 1.8rem;
+      
+      &:nth-child(3) {
+        color: var(--brand-green);
+      }
+      a {
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: var(--brand-green);
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      li {
+        text-align: right;
+      }
+    }
+  }
+}

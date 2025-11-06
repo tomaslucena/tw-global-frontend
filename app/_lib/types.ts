@@ -1,4 +1,4 @@
-export type serverResponse<T> = T
+export type serverResponse<T> = T & { error?: string | null };
 
 export type Shop = {
   id: number,
@@ -20,6 +20,7 @@ export type Shop = {
   facebook: string | null,
   instagram: string | null
   country: Country
+  gallery: { id: number, image: string }[]
 }
 
 export type Country = {

@@ -2,43 +2,45 @@
 
 import React, { useState } from "react";
 import Button from "@/app/_components/Button/Button";
+import Image from "next/image";
+import Link from "next/link";
+
+import Logo from '@/app/_assets/images/logo-header.svg'
+
+import styles from "./header.module.scss";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Find Us", href: "#findus" },
-  { label: "Social Responsibility", href: "#social" },
+  { label: "ABOUT", href: "/about-us" },
+  { label: "SHOPS", href: "/shops" },
+  { label: "TESTIMONIALS", href: "/#testimonials" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white w-full">
-      <div className="mx-auto max-w-[1280px] flex items-center justify-between py-3 md:py-4">
-        {/* Left: Logo */}
+    <header className={`${styles.header} sticky top-0 z-50 bg-white w-full p-4 lg:p-0`}>
+      <div className="mx-auto max-w-[1280px] flex items-center justify-between">
         <div className="flex-shrink-0">
-          <a href="#" className="flex items-center gap-2">
-            {/* Placeholder logo */}
-            <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-lg text-gray-600">
-              LOGO
-            </div>
+          <a href="/" className="flex items-center gap-2">
+            <Image src={Logo} alt="Twist & Buckle Logo" width={156} height={86} />
           </a>
         </div>
 
         {/* Middle + Right: Desktop Nav */}
         <nav className="hidden md:flex flex-1 items-center justify-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className={styles.navLink}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="hidden md:flex items-center">
-          <Button>FRANCHISES</Button>
+          <Button size="md" href="/franchises">FRANCHISES</Button>
         </div>
 
         {/* Hamburger: Mobile Nav */}
@@ -71,22 +73,22 @@ export default function Header() {
         <div className="md:hidden bg-white shadow-lg border-t border-gray-100 animate-fade-in absolute left-0 right-0 top-full z-40">
           <nav className="flex flex-col items-center gap-4 py-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-gray-700 hover:text-blue-600 font-medium text-lg transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#franchises"
-              className="mt-2 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition-colors"
+            <Button
+              href="/franchises"
+              size="sm"
               onClick={() => setMenuOpen(false)}
             >
               FRANCHISES
-            </a>
+            </Button>
           </nav>
         </div>
       )}

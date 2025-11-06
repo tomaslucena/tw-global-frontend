@@ -1,39 +1,51 @@
 .btn {
   display: inline-block;
   border-radius: 25px;
-  background: #63B7A8;
+  background: var(--brand-green);
+  border: 1px solid var(--brand-green);
   color: #fff;
-  border: none;
   cursor: pointer;
   white-space: nowrap;
   font-weight: 600;
-  transition: background 0.2s, color 0.2s, border 0.2s;
+  transition: all 0.2s ease-in-out;
   text-align: center;
   text-decoration: none;
+  letter-spacing: 1.1px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--brand-green);
+    border: 1px solid var(--brand-green);
+  }
 }
 
 .btn.outlined {
   background: #fff;
   color: #171717;
-  border: 2px solid #171717;
+  border: 1px solid #171717;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #171717;
+    color: #FFF;
+    border: 1px solid #171717;
+  }
 }
 
 .btn-sm {
   font-size: 0.85rem;
-  padding: 0.3rem 1.1rem;
-  height: 2rem;
+  padding-inline: 1.1rem;
+  line-height: 2;
 }
 
 .btn-md {
   font-size: 1rem;
-  padding: 0.5rem 1.5rem;
-  height: 2.5rem;
+  padding-inline: 1.5rem;
+  line-height: 3;
 }
 
 .btn-lg {
   font-size: 1.15rem;
-  padding: 0.7rem 2.2rem;
-  height: 3rem;
+  padding-inline: 2.2rem;
+  line-height: 4;
 }
 
 .btn:active {

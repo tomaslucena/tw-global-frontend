@@ -1,0 +1,169 @@
+.franchiseHeroContainer {
+  border-radius: 25px;
+  background-color: aliceblue;
+  .franchiseHero {
+    position: relative;
+    h3 {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      @media(min-width: 1024px) {
+        font-size: 64px;
+      }
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      position: relative;
+      max-width: auto;
+      @media(min-width: 1024px) {
+        position: absolute;
+        max-width: 400px;
+        top: 62%;
+        right: 0;
+      }
+    }
+  }
+}
+
+.franchiseProcess {
+  --first-box: 15px;
+  --second-box: 30px;
+  --third-box: 45px;
+  --fourth-box: 60px;
+  @media(min-width: 1024px) {
+    --first-box: 25px;
+    --second-box: 50px;
+    --third-box: 75px;
+    --fourth-box: 100px;
+  }
+  h4 {
+    text-transform: uppercase;
+    margin-top: -10px;
+  }
+  ul {
+    max-width: 720px;
+    margin: 4rem auto 0rem;
+    @media(min-width: 1024px) {
+      margin: 8rem auto 0rem;
+    }
+  }
+  li {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    h6 {
+      color: var(--brand-green);
+    }
+  }
+  .franchiseBox {
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    flex-shrink: 0;
+    @media(min-width: 1024px) {
+      width: 150px;
+      height: 150px;
+    }
+    img {
+      transform: rotate(-35deg);
+      z-index: 5;
+      position: absolute;
+      bottom: -10px;
+      left: 0px;
+      max-width: 75px;
+      @media(min-width: 1024px) {
+        max-width: 150px;
+        bottom: -10px;
+        left: -25px;
+      }
+    }
+    .imageWrapperOpposite {
+      img {
+        transform: rotate(35deg) !important;
+        left: 10px;
+        @media(min-width: 1024px) {
+          left: 35px;
+        }
+      }
+    }
+    &:before {
+      content: '';
+      background-color: var(--brand-green);
+      width: 100%;
+      height: var(--first-box);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+    &:after {
+      content: '';
+      background-image: url('../_assets/images/wave.svg');
+      width: 100%;
+      height: 15px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: calc(100% - calc(var(--first-box) + 13px));
+      left: 0;
+      z-index: 1;
+      @media(min-width: 1024px) {
+        height: 25px;
+        top: calc(100% - calc(var(--first-box) + 21px));
+      }
+  }
+    &.franchiseBox2 {
+      &:before {
+        height: var(--second-box);
+      }
+      &:after {
+        top: calc(100% - calc(var(--second-box) + 13px));
+        @media(min-width: 1024px) {
+          top: calc(100% - calc(var(--second-box) + 21px));
+        }
+      }
+    }
+    &.franchiseBox3 {
+      &:before {
+        height: var(--third-box);
+      }
+      &:after {
+        top: calc(100% - calc(var(--third-box) + 13px));
+        @media(min-width: 1024px) {
+          top: calc(100% - calc(var(--third-box) + 21px));
+        }
+      }
+    }
+    &.franchiseBox4 {
+      &:before {
+        height: var(--fourth-box);
+      }
+      &:after {
+        top: calc(100% - calc(var(--fourth-box) + 13px));
+        @media(min-width: 1024px) {
+          top: calc(100% - calc(var(--fourth-box) + 21px));
+        }
+      }
+    }
+    &.franchiseBox5 {
+      background-color: var(--brand-green);
+    }
+  }
+}
+
+.ready {
+  background: 
+    url("../_assets/images/orange-clouds.webp") lightgray 50% / cover no-repeat, 
+    linear-gradient(90deg, #FFEFDF 0%, #F3A660 100%);
+    border-radius: 25px;
+    margin-bottom: 4rem;
+}
