@@ -7,9 +7,9 @@ import styles from '../shops.module.scss';
 import SwiperSlider from '@/app/_components/Swiper/SwiperSlider';
 
 type PageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function ShopPage({ params }: PageProps) {
