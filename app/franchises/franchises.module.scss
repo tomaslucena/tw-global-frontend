@@ -161,9 +161,7 @@
 }
 
 .ready {
-  background: 
-    url("/assets/images/orange-clouds.webp") lightgray 50% / cover no-repeat, 
-    linear-gradient(90deg, #FFEFDF 0%, #F3A660 100%);
+  background-image: url("/assets/images/orange-clouds.webp");
     border-radius: 25px;
     margin-bottom: 4rem;
 }

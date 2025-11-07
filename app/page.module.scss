@@ -15,9 +15,7 @@
     height: 100%;
     display: none;
     content: "";
-    background: 
-      url("/assets/images/orange-clouds.webp") lightgray 50% / cover no-repeat, 
-      linear-gradient(90deg, #FFEFDF 0%, #F3A660 100%);
+    background-image: url("/assets/images/orange-clouds.webp");
     border-radius: 25px;
     position: absolute;
     top: 0;
