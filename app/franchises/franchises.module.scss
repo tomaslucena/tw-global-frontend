@@ -107,7 +107,7 @@
     }
     &:after {
       content: '';
-      background-image: url('../_assets/images/wave.svg');
+      background-image: url('/assets/images/wave.svg');
       width: 100%;
       height: 15px;
       background-size: contain;
@@ -162,7 +162,7 @@
 
 .ready {
   background: 
-    url("../_assets/images/orange-clouds.webp") lightgray 50% / cover no-repeat, 
+    url("/assets/images/orange-clouds.webp") lightgray 50% / cover no-repeat, 
     linear-gradient(90deg, #FFEFDF 0%, #F3A660 100%);
     border-radius: 25px;
     margin-bottom: 4rem;
